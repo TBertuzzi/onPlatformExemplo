@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:onPlatformExemplo"
+             x:Class="onPlatformExemplo.MainPage">
+   <StackLayout>
+        
+  <StackLayout.Padding>
+   <OnPlatform x:TypeArguments="Thickness">
+     <On Platform="iOS">0,20,0,0</On>
+    </OnPlatform>
+  </StackLayout.Padding>
+        
+<Label Text="Teste de Font" FontSize="18" FontAttributes="Bold"  FontFamily="Roboto-Bold" XAlign="Center" 
+               HorizontalTextAlignment="Center"
+ HorizontalOptions="FillAndExpand"> 
+   <Label.FontFamily>
+          <OnPlatform x:TypeArguments="x:String">
+                  <On Platform="iOS" Value="MarkerFelt-Thin" />
+                  <On Platform="Android" Value="Roboto-Regular" />
+          </OnPlatform>
+     </Label.FontFamily>
+     <Label.TextColor>
+        <OnPlatform x:TypeArguments="Color" iOS="Red" Android="Blue"  />
+    </Label.TextColor> 
+ </Label> 
+        
+ <Button Text="Botao de Teste"  Style="{StaticResource CustomButtonStyle}" BorderWidth="2" HorizontalOptions="Center" > 
+ </Button>
+        
+</StackLayout>
+</ContentPage>

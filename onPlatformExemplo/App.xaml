@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="onPlatformExemplo.App">
+   
+  <Application.Resources>
+   <ResourceDictionary>
+     <Style x:Key="CustomButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#0080BC" />
+        <Setter Property="HeightRequest" Value="60" />
+        <Setter Property="WidthRequest" Value="120" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontFamily" Value="MarkerFelt-Thin" /> 
+        <Setter Property="BorderRadius" Value="5" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:Double" Android="16" iOS="18"  />
+          </Setter.Value>
+        </Setter>
+      </Style>
+ </ResourceDictionary>
+  </Application.Resources>
+</Application>
